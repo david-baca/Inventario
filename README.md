@@ -16,22 +16,29 @@ Pasos de instalacion
 
 DESARROLLADOR
 ---
-1.- Entra en la carpata inventarioAPI
-2.- Da doble clik en inventarioAPI.sln
+- Entra en la carpata inventarioAPI
+- Da doble clik en inventarioAPI.sln
 
 EJECUSION
 ---
-1.- Entra en la direccion inventarioAPI\inventarioAPI\bin\Release\net6.0
-2.- Da doble clik en inventarioAPI.exe
+- Entra en la direccion inventarioAPI\inventarioAPI\bin\Release\net6.0
+- Da doble clik en inventarioAPI.exe
 
 # REACT
 
 DESARROLLADOR
 ---
-1.- Entra en la carpeta REACT
-2.- Ejecuta el comando ` npm install vite `
-3.- Ejecuta el camando ` npm run dev `
-4.- Entra en la direccion que te muestra en consola
+- Entra en la carpeta REACT
+
+- CREA un archivo sin nombre con extencion ".env".
+- Agrega el puerto de conexion que parece en la consola de la ejecusion de tu api con la estructura `VITE_BASE_URL={LINK DE PUERTO}`.
+
+> ejemplo de documento ".env".
+> ` VITE_BASE_URL=https://localhost:5801/ `
+
+- Ejecuta el comando ` npm install vite `.
+- Ejecuta el camando ` npm run dev `.
+- Entra en la direccion que te muestra en consola.
 
 
 
