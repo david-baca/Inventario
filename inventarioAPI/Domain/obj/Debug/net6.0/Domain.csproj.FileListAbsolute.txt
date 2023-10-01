@@ -1,0 +1,42 @@
+E:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.deps.json
+E:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+E:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.dll
+E:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.pdb
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.dll
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\refint\Domain.dll
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.pdb
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+E:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\ref\Domain.dll
+D:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.deps.json
+D:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+D:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.dll
+D:\Proyecto Desarrollo\inventarioAPI\Domain\bin\Debug\net6.0\Domain.pdb
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.dll
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\refint\Domain.dll
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.pdb
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+D:\Proyecto Desarrollo\inventarioAPI\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\Domain\obj\Debug\net6.0\ref\Domain.dll

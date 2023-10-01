@@ -1,0 +1,7 @@
+export * from './AddNav'
+export * from './Barra'
+export * from './Modal'
+export * from './Body'
+export * from './Mapeador'
+export * from './Conexion'
+export * from './Frame'
