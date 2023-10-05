@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\final\OneDrive\Git\Estancias\Inventario\DESAROLLO\inventarioAPI\inventarioAPI\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2023-10-01T03:19:01.8346070Z;True|2023-09-30T22:04:35.6057828-05:00;True|2023-09-30T16:24:23.9937396-05:00;True|2023-09-30T16:20:50.3443294-05:00;True|2023-09-30T16:13:37.4326150-05:00;True|2023-09-30T15:59:04.8679026-05:00;True|2023-09-30T15:36:59.9360683-05:00;True|2023-09-30T15:27:18.6827613-05:00;True|2023-09-30T15:10:52.4808865-05:00;True|2023-09-29T23:47:29.3797503-05:00;True|2023-09-29T23:43:38.2705330-05:00;</History>
+    <_PublishTargetUrl>C:\Users\UpqrooKTL14\Documents\Github\Inventario\inventarioAPI\inventarioAPI\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2023-10-05T21:55:31.3594996Z;True|2023-09-30T22:19:01.8346070-05:00;True|2023-09-30T22:04:35.6057828-05:00;True|2023-09-30T16:24:23.9937396-05:00;True|2023-09-30T16:20:50.3443294-05:00;True|2023-09-30T16:13:37.4326150-05:00;True|2023-09-30T15:59:04.8679026-05:00;True|2023-09-30T15:36:59.9360683-05:00;True|2023-09-30T15:27:18.6827613-05:00;True|2023-09-30T15:10:52.4808865-05:00;True|2023-09-29T23:47:29.3797503-05:00;True|2023-09-29T23:43:38.2705330-05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
