@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { ContextUser } from "../ViewPrivate/Context/ContextUser";
+import { ContextUser } from "../Context";
 import { useContext } from 'react'
-import { Logueo } from '../ViewPrivate/V-Contraller/0-Componentes/Conexion'
+import { Logueo } from '../Conexion/Conexion'
 
 export const Login = () => {
-		const { AgregarUsuario, UserLogin } = useContext(ContextUser);
+		const { setUsuario } = useContext(ContextUser);
 		const navigate = useNavigate();
+
 		const Verificacion = async (event) => {
 			event.preventDefault();
 			const form = event.target;
@@ -13,9 +14,8 @@ export const Login = () => {
 			const Password = form.elements.Password.value;
 
 			if(await Logueo({Usuario:User, Contraseña:Password})){
-				
-				await AgregarUsuario(true);
-				navigate('/Read/', { replace: true });
+				await setUsuario(true);
+				navigate('/Dash/', { replace: true });
 			}else{
 				alert('Usuario o contraseña incorrecto')
 			}

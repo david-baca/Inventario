@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { ContextUser } from '../../Context/ContextUser';
+import { ContextUser } from '../Context/ContextUser';
 
-import ImgDelete from "../../../assets/Delete.svg"
-import ImgUpdate from "../../../assets/Edit.svg"
+import ImgDelete from "../assets/Delete.svg"
+import ImgUpdate from "../assets/Edit.svg"
 
 export const BtnAddNav = ({pk,nombre,entidad,siguiente, Hilera}) => {
 

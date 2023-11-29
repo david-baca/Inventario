@@ -1,5 +1,5 @@
 import axios from "axios";
-import {BASE_URL} from '../../../utils/const'
+import {BASE_URL} from '../utils/const'
 
 export const Logueo = async ({Usuario:User, Contraseña:Pass}) => {
   let Request = BASE_URL;
@@ -9,29 +9,19 @@ export const Logueo = async ({Usuario:User, Contraseña:Pass}) => {
   return (resultado)
 };
 
-export const GetFK = async ({Entidad:E, Text:T, FK:ID}) => {
+export const Get = async ({Entidad:E, Text:T, FK:ID}) => {
   let Request = BASE_URL+E;
-  if(T != null && ID == 0){
+  if(T != null && ID == 0|null){
     Request = Request+"?Text="+T;
   }
-  if(T != null && ID != 0){
+  if(T != null && ID != 0|null){
     Request = Request+"?Text="+T+"&fk="+ID;
   }
-  if(T == null && ID != 0){
+  if(T == null && ID != 0|null){
     Request = Request+"?&fk="+ID;
   }
   const response = await axios.get(Request);
 
-  const resultado = response.data.result;
-  return (resultado)
-};
-
-export const Get = async ({Entidad:E, Datos:D}) => {
-  let Request = BASE_URL+E;
-  if(D != null){
-    Request = Request+"?Text="+D;
-  }
-  const response = await axios.get(Request);
   const resultado = response.data.result;
   return (resultado)
 };

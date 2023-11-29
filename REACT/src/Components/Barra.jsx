@@ -1,5 +1,4 @@
 export const Barra = ({ReadBD:FR}) => {
-
     const handleChange = (event) => {
         const value = event.target.value;
         FR(value)
