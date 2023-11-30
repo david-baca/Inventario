@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react"
 import { Get } from "../Conexion/Conexion"
-import { Toolbox, Barra, BtnAdd } from "../Components/";
+import { Toolbox, Barra} from "../Components/";
 
-export const Catalogos = () => {
+export const Historial = () => {
+
     let Search
     const [ PackageBD, setPackageBD] = useState();
-    const Estrcutura = { nombre: '' };
     const [ bandera, setbandera] = useState(true); 
 
     const Recargar=()=>{
@@ -13,7 +13,7 @@ export const Catalogos = () => {
     }
 
     const Cargar = async () => {
-        const pack = await Get({Entidad:"Catalogos", Text:Search});
+        const pack = await Get({Entidad:"Historial", Text:Search});
         setPackageBD( pack )
     }
     const Buscar = (item) => {
@@ -25,13 +25,11 @@ export const Catalogos = () => {
         Cargar()
         setbandera(false)
     },[bandera]);
-
-    const Kit = Toolbox({Entidad:"Catalogos", Reload:Recargar});
-
+    console.log(PackageBD)
 
     return (
         <>        
-            <Visore Encabezado={"Control de Catalogos"} changeEdit={Buscar} 
+            <Visore Encabezado={"Control de Historial"} changeEdit={Buscar} 
             clickCrear={()=>Kit.Kit_creation.TolsCreate.On(Estrcutura)}>
             </Visore>
             
@@ -40,8 +38,10 @@ export const Catalogos = () => {
                     <thead>
                         <tr>
                             <td className='p-2 border border-gray-300'>#</td>
-                            <td className='w-full p-2 border border-gray-300 '>Nombre</td>
-                            <td className='border border-gray-300 p-2'>Acciones</td>
+                            <td className='w-full p-2 border border-gray-300 '>Descripcion</td>
+                            <td className='border border-gray-300 p-2'>Fecha</td>
+                            <td className='border border-gray-300 p-2'>Usuario</td>
+                            <td className='border border-gray-300 p-2'>Accion</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,37 +51,25 @@ export const Catalogos = () => {
                                     {Index}
                                 </td>
                                 <td className='p-2 border border-gray-100'>
-                                    {element.nombre}
-                                </td>
-                                <td className='ps-2 flex gap-3 border border-gray-200'>
-                                    <button onClick={()=>{Kit.Kit_Edit.TolsEdit.On(element)}} className='bg-yellow-300 p-1 px-4'>
-                                        Editar
-                                    </button>
-                                    
-
-                                    <button onClick={Kit.Kit_Eliminate.Tols.On} className='bg-red-400 px-4 p-1 text-white'>
-                                        Eliminar
-                                    </button>
-                                </td>
-                                
+                                    {element.descripcion}
+                                </td>    
+                                <td className='p-2 border border-gray-100'>
+                                    {element.fecha}
+                                </td> 
+                                <td className='p-2 border border-gray-100'>
+                                    {element.usuario.n_Usuario}
+                                </td>   
+                                <td className='p-2 border border-gray-100'>
+                                    {element.accion}
+                                </td>                      
                             </tr>
                         )))}
                     </tbody>
                 </table>
             </div>
-
-
-
-            {Kit.Kit_Edit.TolsEdit.View}
-            {Kit.Kit_Edit.MsjTrue.View}
-            {Kit.Kit_Eliminate.Tols.View}
-            {Kit.Kit_Eliminate.MsjTrue.View}
-            {Kit.Kit_creation.TolsCreate.View}
-            {Kit.Kit_creation.MsjTrue.View}
         </>
-    );
+    )
 }
-
 export const Visore =({Encabezado:T,changeEdit:E,clickCrear:C})=>{
     return(
         <div className="w-full pt-2">
@@ -93,9 +81,6 @@ export const Visore =({Encabezado:T,changeEdit:E,clickCrear:C})=>{
                     <section className="flex">
                         <div className="me-5">
                             <Barra ReadBD={E}/>
-                        </div>
-                        <div className="w-[200px]">
-                            <BtnAdd Crear={C}/>
                         </div>
                     </section>
                 </div>

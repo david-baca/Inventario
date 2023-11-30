@@ -24,6 +24,9 @@ export const Dash = ({contenido}) =>{
                 <Link to="/Dash/Categorias">
                     <DashBtn Titulo="Categorias"/>
                 </Link>
+                <Link to="/Dash/Historial">
+                    <DashBtn Titulo="Historial"/>
+                </Link>
               
               </div>
             </div>

@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import {Route, Routes, Navigate} from 'react-router-dom'
 import {UserProvider} from "./Context/UserProvider"
 import { ContextUser } from "./Context/ContextUser"
-import { Login, Dash, Catalogos, Categorias } from './View'
+import { Login, Dash, Catalogos, Categorias, Historial } from './View'
 
 export const App = () => {
     return (
@@ -27,6 +27,10 @@ export const App = () => {
           <Categorias/>
         }/></Protect>}/>
         
+        <Route path='/Dash/Historial/*' element={<Protect><Dash contenido={
+          <Historial/>
+        }/></Protect>}/>
+
       </Routes>
       </UserProvider>
     )

@@ -1,6 +1,8 @@
 import axios from "axios";
 import {BASE_URL} from '../utils/const'
 
+
+
 export const Logueo = async ({Usuario:User, Contraseña:Pass}) => {
   let Request = BASE_URL;
   Request = Request+"Usuario?Usuario="+User+'&Contrasena='+Pass;
@@ -27,13 +29,15 @@ export const Get = async ({Entidad:E, Text:T, FK:ID}) => {
 };
 
 export const Post = async ({Entidad:E,Datos:D}) => {
-  const response = await axios.post(BASE_URL+E+"/Crear", D);
+  const Data = {...D, idUsuario:1};
+  const response = await axios.post(BASE_URL+E+"/Crear", Data);
   const result = response.data
   return (result)
 };
 
 export const Put = async ({Entidad:E, Datos:D}) => {
-  const response = await axios.put(BASE_URL+E+"/Actualizar/"+D.pk, D)
+  const Data = {...D, idUsuario:1};
+  const response = await axios.put(BASE_URL+E+"/Actualizar/"+D.pk, Data)
   const result = response.data
   return (result)
 };
