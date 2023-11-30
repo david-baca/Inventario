@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using inventarioAPI.Services.IServices;
 using static inventarioAPI.Context.Aplication_DB_Context;
+using Domain.Entity;
 
 namespace inventarioAPI.Services.Services
 {
@@ -93,11 +94,23 @@ namespace inventarioAPI.Services.Services
                 {
                     return new Response<CategoriaResponse>("No existe este dato en la base de datos", false);
                 }
+
+
+
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "se < EDITO > La Marca con Nombre: " + resquest.Marca + " por " + i.Marca;
+                hist.Descripcion += "se < EDITO > La Modelo con Nombre: " + resquest.Modelo + " por " + i.Modelo;
+                hist.Descripcion += "se < EDITO > La Descripcion con: " + resquest.Descripcion + " por " + i.Descripcion;
+
+
                 resquest.Marca = i.Marca;
                 resquest.Modelo = i.Modelo;
                 resquest.Descripcion = i.Descripcion;
 
-
+                _context.Historials.Update(hist);
                 _context.Categorias.Update(resquest);
                 await _context.SaveChangesAsync();
 

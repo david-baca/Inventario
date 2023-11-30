@@ -49,6 +49,7 @@ internal class Program
         builder.Services.AddTransient<IResponsable, ResponsableServices>();
         builder.Services.AddTransient<IUsuario, UsuarioServices>();
         builder.Services.AddTransient<IArticulo, ArticuloServices>();
+        builder.Services.AddTransient<IHistorial, HistorialServices>();
 
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();

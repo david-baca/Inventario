@@ -9,6 +9,7 @@ namespace Domain.Dto
 {
     public class FuenteResponse
     {
+        public int IdUsuario { get; set; }
         public int Pk { get; set; }
         public string Nombre { get; set; }
 

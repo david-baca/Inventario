@@ -35,6 +35,8 @@ namespace inventarioAPI.Context
             public DbSet<Usuario> Usuarios { get; set; }
 
             public DbSet<Articulo> Articulos { get; set; }
+            public DbSet<Historial> Historials { get; set; }
+            public DbSet<Accion> Accion { get; set; }
         }
     }
 }

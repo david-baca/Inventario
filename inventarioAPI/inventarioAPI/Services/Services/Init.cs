@@ -18,6 +18,8 @@ namespace inventarioAPI.Services.Services
         {
             var root = await _context.Usuarios.Where(x => x.PkUsuario==1).FirstOrDefaultAsync();
             var rol = await _context.Roles.Where(x => x.PkRol==1).FirstOrDefaultAsync();
+            var acciones = await _context.Accion.Where(x => x.PkAccion == 1).FirstOrDefaultAsync();
+
             try
             {
                 if (root == null && rol == null)
@@ -41,6 +43,13 @@ namespace inventarioAPI.Services.Services
                         Estado = true,
                     };
                     await _context.Usuarios.AddAsync(root);
+                    await _context.SaveChangesAsync();
+
+                    acciones = new Accion()
+                    {
+                        Nombre = "Editar"
+                    };
+                    await _context.Accion.AddAsync(acciones);
                     await _context.SaveChangesAsync();
                 }
             }

@@ -9,6 +9,7 @@ namespace Domain.Dto
 {
     public class CategoriaResponse
     {
+        public int IdUsuario { get; set; }
         public int Pk { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }

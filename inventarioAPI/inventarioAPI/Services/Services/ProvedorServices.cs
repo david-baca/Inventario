@@ -79,7 +79,16 @@ namespace inventarioAPI.Services.Services
                     return new Response<ProvedorResponse>("No esxite este dato en la base de datos", false);
                 }
 
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "se < EDITO > el Proveedor con Nombre: " + resquest.Nombre + " por " + i.Nombre;
+
+
                 resquest.Nombre = i.Nombre;
+
+                _context.Historials.Update(hist);
                 _context.Provedores.Update(resquest);
                 await _context.SaveChangesAsync();
 

@@ -11,6 +11,7 @@ namespace Domain.Dto
 {
     public class ArticuloResponse
     {
+        public int IdUsuario { get; set; }
         public int Pk { get; set; }
 
         public string FEQADD { get; set; }

@@ -79,9 +79,20 @@ namespace inventarioAPI.Services.Services
                    return new Response<CatalogoResponse> ("No esxite este dato en la base de datos", true);
                 }
 
+               
+
+
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "se < EDITO > el Catalogo con Nombre: " + resquest.Nombre + " por " + i.Nombre;
+
                 resquest.Nombre = i.Nombre;
+
+                _context.Historials.Update(hist);
                 _context.Catalogos.Update(resquest);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();;
 
                 return new Response<CatalogoResponse>("Elemento exitosamente editado",true);
             }

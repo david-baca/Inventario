@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using inventarioAPI.Services.IServices;
 using System.Collections.Generic;
 using static inventarioAPI.Context.Aplication_DB_Context;
+using Microsoft.Extensions.Hosting;
 
 namespace inventarioAPI.Services.Services
 {
@@ -78,7 +79,16 @@ namespace inventarioAPI.Services.Services
                     return new Response<FuenteResponse>("No esxite este dato en la base de datos", false);
                 }
 
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "se < EDITO > la Fuente con Nombre: " + resquest.Nombre + " por " + i.Nombre;
+
+
                 resquest.Nombre = i.Nombre;
+
+                _context.Historials.Update(hist);
                 _context.Fuentes.Update(resquest);
                 await _context.SaveChangesAsync();
 

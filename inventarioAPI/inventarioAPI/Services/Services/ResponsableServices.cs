@@ -90,12 +90,22 @@ namespace inventarioAPI.Services.Services
                 {
                     return new Response<ResponsableResponse>("No esxite este dato en la base de datos", false);
                 }
+
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "  Se < EDITO > el Responsable con Nombre: " + resquest.Nombre + " por " + i.Nombre;
+                hist.Descripcion += "  Se < EDITO > el Apellido Paterno con: " + resquest.ApellidoP + " por " + i.ApellidoP;
+                hist.Descripcion += "  Se < EDITO > el Apellido Materno con: " + resquest.ApellidoM + " por " + i.ApellidoM;
+
+
                 resquest.Nombre = i.Nombre;
                 resquest.ApellidoP = i.ApellidoP;
                 resquest.ApellidoM = i.ApellidoM;
-             
 
 
+                _context.Historials.Update(hist);
                 _context.Responsables.Update(resquest);
                 await _context.SaveChangesAsync();
 

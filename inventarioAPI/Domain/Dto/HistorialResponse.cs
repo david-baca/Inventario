@@ -1,0 +1,44 @@
+﻿using Domain.Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.Dto
+{
+    public class HistorialResponse
+    {
+        public int PkHistorial { get; set; }
+
+        public string Descripcion { get; set; }
+
+        public DateTime Fecha { get; set; }
+
+        public HistorialResponse Conversor(Historial i)
+        {
+            HistorialResponse request = new HistorialResponse()
+            {
+                PkHistorial = i.PkHistorial,
+                Descripcion = i.Descripcion,
+                Fecha = i.Fecha,
+
+            };
+
+            return request;
+        }
+
+        public List<HistorialResponse> ListConvert(List<Historial> i)
+        {
+            List<HistorialResponse> request = new List<HistorialResponse>();
+
+            foreach (Historial item in i)
+            {
+                HistorialResponse response = new HistorialResponse();
+                request.Add(response.Conversor(item));
+            }
+
+            return request;
+        }
+    }
+}

@@ -129,6 +129,26 @@ namespace inventarioAPI.Services.Services
                     return new Response<ArticuloResponse>("No esxite este dato en la base de datos", false);
                 }
 
+
+
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+
+                hist.Descripcion += " se < EDITO > el FEQADD con: " + resquest.FEQADD + " por " + i.FEQADD;
+                hist.Descripcion += " se < EDITO > el FEQ_ASC con: " + resquest.FEQ_ASC + " por " + i.FEQASIC;
+                hist.Descripcion += " se < EDITO > la Polisa con Nombre: " + resquest.Polisa + " por " + i.Polisa;
+                hist.Descripcion += " se < EDITO > la Factura con Nombre: " + resquest.Factura + " por " + i.Factura;
+                hist.Descripcion += " se < EDITO > el Token con Token: " + resquest.Token + " por " + i.Token;
+                hist.Descripcion += " se < EDITO > el Costo con: " + resquest.Costo + " por " + i.Costo;
+                hist.Descripcion += " se < EDITO > el Estado del Articulo con Nombre: " + resquest.Estado_Articulo + " por " + i.Estado;
+                hist.Descripcion += " se < EDITO > la Categoria con Nombre: " + resquest.FkCategoria + " por " + i.FkCategoria;
+                hist.Descripcion += " se < EDITO > el Articulo con Nombre: " + resquest.FkResponsable + " por " + i.fkResonsable;
+                hist.Descripcion += " se < EDITO > el Articulo con Nombre: " + resquest.FkProvedor + " por " + i.FkProvedor;
+                hist.Descripcion += " se < EDITO > el Articulo con Nombre: " + resquest.FkFuente + " por " + i.FkFuente;
+                hist.Descripcion += " se < EDITO > el Articulo con Nombre: " + resquest.FkArea + " por " + i.FkArea;
+
                 resquest.FEQADD = DateTime.Parse(i.FEQADD);
                 resquest.FEQ_ASC = DateTime.Parse(i.FEQASIC);
                 resquest.Polisa = i.Polisa;
@@ -142,7 +162,7 @@ namespace inventarioAPI.Services.Services
                 resquest.FkFuente = i.FkFuente;
                 resquest.FkArea = i.FkArea;
 
-
+                _context.Historials.Update(hist);
                 _context.Articulos.Update(resquest);
                 await _context.SaveChangesAsync();
 

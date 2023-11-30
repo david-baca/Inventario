@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {}
+    "C:\\Users\\UpqrooKTL14\\Documents\\git\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {
+    "C:\\Users\\UpqrooKTL14\\Documents\\git\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\UpqrooKTL14\\Documents\\git\\Inventario\\inventarioAPI\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\UpqrooTKL8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\UpqrooKTL14\\Documents\\git\\Inventario\\inventarioAPI\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\UpqrooKTL14\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\UpqrooKTL14\\Documents\\git\\Inventario\\inventarioAPI\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UpqrooTKL8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UpqrooKTL14\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

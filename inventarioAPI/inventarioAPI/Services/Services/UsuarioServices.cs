@@ -74,12 +74,24 @@ namespace inventarioAPI.Services.Services
                 {
                     return new Response<UsuarioResponse>("No esxite este dato en la base de datos", false);
                 }
+
+                Historial hist = new Historial();
+                hist.FkUsuario = i.IdUsuario;
+                hist.FkAccion = 1;
+                hist.Fecha = DateTime.Now;
+                hist.Descripcion += "  Se < EDITO > el Usuario con Nombre: " + resquest.Nombres + " por " + i.Nombres;
+                hist.Descripcion += "  Se < EDITO > el Usuario con Apellido paterno: " + resquest.Apellido_P + " por " + i.Apellido_P;
+                hist.Descripcion += "  Se < EDITO > el Usuario con Apellido Materno: " + resquest.Apellido_M + " por " + i.Apellido_M;
+                hist.Descripcion += "  Se < EDITO > el Usuario con Contraseña: " + resquest.Contrseña + " por " + i.Contrseña;
+
+
                 resquest.Nombres = i.Nombres;
                 resquest.Nombres = i.Nombres;
                 resquest.Apellido_P = i.Apellido_P;
                 resquest.Apellido_M = i.Apellido_M;
                 resquest.Contrseña = i.Contrseña;
 
+                _context.Historials.Update(hist);
                 _context.Usuarios.Update(resquest);
                 await _context.SaveChangesAsync();
 

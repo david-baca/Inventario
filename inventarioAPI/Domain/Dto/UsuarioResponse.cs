@@ -9,6 +9,7 @@ namespace Domain.Dto
 {
     public class UsuarioResponse
     {
+        public int IdUsuario { get; set; }
 
         public int Pk { get; set; }
         public string Nombres { get; set; }
@@ -27,6 +28,7 @@ namespace Domain.Dto
                 Nombres = i.Nombres,
                 Apellido_P = i.Apellido_P,
                 Apellido_M = i.Apellido_M,
+                N_Usuario = i.N_Usuario,
                 Contrseña = i.Contrseña,
                 Fk = i.FkRol,
 
@@ -55,6 +57,7 @@ namespace Domain.Dto
                 Nombres = i.Nombres,
                 Apellido_P = i.Apellido_P,
                 Apellido_M = i.Apellido_M,
+                N_Usuario = i.N_Usuario,
                 Contrseña = i.Contrseña,
                 FkRol = i.Fk,
                 Estado = true
