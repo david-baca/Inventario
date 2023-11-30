@@ -19,20 +19,16 @@ namespace Domain.Dto
 
         public int FkRol { get; set; }
 
-        public RolResponse Rol { get; set; }
-
 
         public ResponsableResponse Conversor(Responsable i)
         {
-            RolResponse x = new RolResponse();
             ResponsableResponse request = new ResponsableResponse()
             {
               Pk = i.PkResponsable,
               Nombre = i.Nombre,
               ApellidoP = i.ApellidoP,
               ApellidoM = i.ApellidoM,
-              FkRol = i.FkRol,
-              Rol = x.Conversor(i.Rol)
+              FkRol = i.FkRol
             };
 
             return request;

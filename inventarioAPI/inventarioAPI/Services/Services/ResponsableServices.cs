@@ -29,17 +29,17 @@ namespace inventarioAPI.Services.Services
                 var response = await _context.Responsables.Where(x => x.Estado == true).Include(x=>x.Rol).ToListAsync();
 
                 if (Text != null) { response = await _context.Responsables.Where(x => x.Estado == true && 
-                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) ).Include(x => x.Rol).ToListAsync(); }
+                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) ).ToListAsync(); }
 
                 if (fk!=0)
                 {
-                    response = await _context.Responsables.Where(x => x.Estado == true && x.FkRol == fk).Include(x => x.Rol).ToListAsync();
+                    response = await _context.Responsables.Where(x => x.Estado == true && x.FkRol == fk).ToListAsync();
                 }
 
                 if (Text != null && fk!=0)
                 {
                     response = await _context.Responsables.Where(x => x.Estado == true &&
-                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) && x.FkRol == fk).Include(x => x.Rol).ToListAsync();
+                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) && x.FkRol == fk).ToListAsync();
                 }
 
 

@@ -28,9 +28,25 @@ export const Toolbox = ({Entidad:E, Reload:R}) =>{
 
 const FormVentana = (Accion) => {
   const [Value, setValue] = useState(false);
-  const On = (val) => setValue(val);
+  const [packCatalogos, setpackCatalogos] = useState();
+  const [packRoles, setpackRoles] = useState();
+
+  const CargarCatalogos = async () =>{
+    const pack = await Get({Entidad:"Catalogos"});
+    setpackCatalogos(pack);
+  }
+
+  const CargarRoles = async () =>{
+    const pack = await Get({Entidad:"Roles"});
+    setpackRoles(pack);
+  }
+
+  const On = (val) => {
+    setValue(val)
+    CargarCatalogos();
+    CargarRoles();
+  };
   const Off = () => setValue(false);
-  console.log(Value)
   const Change = {
     Nombre: (e) => {
       let newValue = {...Value};
@@ -149,19 +165,36 @@ const FormVentana = (Accion) => {
                   <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Costo</label>
               </div>
             )}
+
             {Value.fkCatalogo != null && (
               <select name="select">
-                {Value.catalogo.map((element) => ( (
-                  <option value={element.pk}>{element.nombre}</option>
-                )))}
-              </select>
+              <option value={3} disabled selected>Selecciona un Catalogo</option>
+              {packCatalogos != null && packCatalogos.length > 0 ? (
+                packCatalogos.map((element) => (
+                  <option key={element.pk} value={element.pk}>
+                    {element.nombre}
+                  </option>
+                ))
+              ) : (
+                <option value="" disabled>No hay datos disponibles..</option>
+              )}
+            </select>
             )}
+
             {Value.fkrol != null && (
               <select name="select">
-                {Value.rol.map((element) => ( (
-                  <option value={element.pk}>{element.nombre}</option>
-                )))}
-              </select>
+              <option value={3}  >Selecciona una opción</option>
+              {packRoles != null && packRoles.length > 0 ? (
+                packRoles.map((element) => (
+                  <option key={element.pk} value={element.pk}>
+                    {element.nombre}
+                  </option>
+                ))
+              ) : (
+                <option value="" >No hay datos disponibles</option>
+              )}
+            </select>
+            
             )}
           <div className="flex gap-5 pt-5">
           <button onClick={()=>Off()} className="bg-blue-500 text-white w-full rounded-md px-2 py-1"> Cancelar </button>

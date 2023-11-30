@@ -59,7 +59,7 @@ export const Catalogos = () => {
                                     </button>
                                     
 
-                                    <button onClick={Kit.Kit_Eliminate.Tols.On} className='bg-red-400 px-4 p-1 text-white'>
+                                    <button onClick={()=>{Kit.Kit_Eliminate.Tols.On(element.pk)}} className='bg-red-400 px-4 p-1 text-white'>
                                         Eliminar
                                     </button>
                                 </td>

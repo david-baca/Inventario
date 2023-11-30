@@ -5,7 +5,7 @@ import { Toolbox, Barra, BtnAdd, Displey } from "../Components/";
 export const Categorias = () => {
     let Search
     const [ PackageBD, setPackageBD] = useState();
-    const Estrcutura = {pk: 0,marca: "",modelo: "",descripcion: "",fkCatalogo: ""};
+    const Estrcutura = {pk: 0,marca: "",modelo: "",descripcion: "",fkCatalogo:0};
     const [ bandera, setbandera] = useState(true); 
 
     const Recargar=()=>{
@@ -13,7 +13,7 @@ export const Categorias = () => {
     }
 
     const Cargar = async () => {
-        const pack = await Get({Entidad:"Categoría", Text:Search, FK:1});
+        const pack = await Get({Entidad:"Categoría"});
         setPackageBD( pack )
     }
     const Buscar = (item) => {

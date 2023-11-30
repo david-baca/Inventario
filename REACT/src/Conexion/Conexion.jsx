@@ -12,16 +12,20 @@ export const Logueo = async ({Usuario:User, Contraseña:Pass}) => {
 };
 
 export const Get = async ({Entidad:E, Text:T, FK:ID}) => {
+  
   let Request = BASE_URL+E;
-  if(T != null && ID == 0|null){
+  if(T != null && ID == 0||null){
     Request = Request+"?Text="+T;
   }
-  if(T != null && ID != 0|null){
+  if(T != null && ID != 0||null){
     Request = Request+"?Text="+T+"&fk="+ID;
   }
-  if(T == null && ID != 0|null){
+  if(T == null && ID != 0||null){
+    console.log(E+T+ID)
     Request = Request+"?&fk="+ID;
   }
+    //ALERTA
+  
   const response = await axios.get(Request);
 
   const resultado = response.data.result;
