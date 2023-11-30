@@ -22,29 +22,26 @@ namespace inventarioAPI.Services.Services
                 Mensaje = "La lista de Categorias";
                 //var response = await _context.ListaRAs.Include(x => x.Articulo).Include(x => x.Responsable).ToListAsync();
 
-                var response = await _context.Categorias.Where(x => x.Estado == true).ToListAsync();
+                var response = await _context.Categorias.Where(x => x.Estado == true).Include(x=>x.Catalogo).ToListAsync();
 
                 if (Text != null)
                 {
                     response = await _context.Categorias.Where(x => x.Estado == true &&
-                    (x.Descripcion).Contains(Text)).ToListAsync();
+                    (x.Descripcion).Contains(Text)).Include(x => x.Catalogo).ToListAsync();
                 }
 
                 if (fk!=0)
                 {
-                    response = await _context.Categorias.Where(x => x.Estado == true && x.FkCatalogo == fk)
+                    response = await _context.Categorias.Where(x => x.Estado == true && x.FkCatalogo == fk).Include(x => x.Catalogo)
                         .ToListAsync();
                 }
 
                 if (Text != null && fk!=0)
                 {
                     response = await _context.Categorias.Where(x => x.Estado == true &&
-                    (x.Descripcion).Contains(Text) && x.FkCatalogo == fk).ToListAsync();
+                    (x.Descripcion).Contains(Text) && x.FkCatalogo == fk).Include(x => x.Catalogo).ToListAsync();
                 }
 
-
-
-                if (Text == null) { response = await _context.Categorias.Where(x => x.Estado == true && x.FkCatalogo== fk).ToListAsync(); }
 
 
 

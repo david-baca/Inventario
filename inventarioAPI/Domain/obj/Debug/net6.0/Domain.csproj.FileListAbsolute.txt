@@ -54,3 +54,17 @@ C:\Users\UpqrooKTL14\Documents\Github\Inventario\inventarioAPI\Domain\obj\Debug\
 C:\Users\UpqrooKTL14\Documents\Github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.pdb
 C:\Users\UpqrooKTL14\Documents\Github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
 C:\Users\UpqrooKTL14\Documents\Github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+C:\Users\UpqrooTKL8\Documents\github\Inventario\inventarioAPI\Domain\obj\Debug\net6.0\ref\Domain.dll

@@ -26,20 +26,20 @@ namespace inventarioAPI.Services.Services
                 //var response = await _context.ListaRAs.Include(x => x.Articulo).Include(x => x.Responsable).ToListAsync();
                 
 
-                var response = await _context.Responsables.Where(x => x.Estado == true).ToListAsync();
+                var response = await _context.Responsables.Where(x => x.Estado == true).Include(x=>x.Rol).ToListAsync();
 
                 if (Text != null) { response = await _context.Responsables.Where(x => x.Estado == true && 
-                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) ).ToListAsync(); }
+                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) ).Include(x => x.Rol).ToListAsync(); }
 
                 if (fk!=0)
                 {
-                    response = await _context.Responsables.Where(x => x.Estado == true && x.FkRol == fk).ToListAsync();
+                    response = await _context.Responsables.Where(x => x.Estado == true && x.FkRol == fk).Include(x => x.Rol).ToListAsync();
                 }
 
                 if (Text != null && fk!=0)
                 {
                     response = await _context.Responsables.Where(x => x.Estado == true &&
-                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) && x.FkRol == fk).ToListAsync();
+                    (x.Nombre+x.ApellidoP+x.ApellidoM).Contains(Text) && x.FkRol == fk).Include(x => x.Rol).ToListAsync();
                 }
 
 

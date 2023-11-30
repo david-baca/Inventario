@@ -2774,19 +2774,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UpqrooKTL14\\.nuget\\packages\\": {}
+    "C:\\Users\\UpqrooTKL8\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\UpqrooKTL14\\Documents\\Github\\Inventario\\inventarioAPI\\inventarioAPI\\inventarioAPI.csproj",
+      "projectUniqueName": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\inventarioAPI\\inventarioAPI.csproj",
       "projectName": "inventarioAPI",
-      "projectPath": "C:\\Users\\UpqrooKTL14\\Documents\\Github\\Inventario\\inventarioAPI\\inventarioAPI\\inventarioAPI.csproj",
-      "packagesPath": "C:\\Users\\UpqrooKTL14\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\UpqrooKTL14\\Documents\\Github\\Inventario\\inventarioAPI\\inventarioAPI\\obj\\",
+      "projectPath": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\inventarioAPI\\inventarioAPI.csproj",
+      "packagesPath": "C:\\Users\\UpqrooTKL8\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\inventarioAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UpqrooKTL14\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UpqrooTKL8\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2800,8 +2800,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\UpqrooKTL14\\Documents\\Github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\UpqrooKTL14\\Documents\\Github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj"
+            "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\UpqrooTKL8\\Documents\\github\\Inventario\\inventarioAPI\\Domain\\Domain.csproj"
             }
           }
         }
@@ -2854,7 +2854,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

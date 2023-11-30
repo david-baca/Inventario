@@ -15,9 +15,12 @@ namespace Domain.Dto
         public string Descripcion { get; set; }
         public int FkCatalogo { get; set; }
 
+        public CatalogoResponse Catalogo { get; set; }
+
 
         public CategoriaResponse Conversor(Categoria i)
         {
+            CatalogoResponse x = new CatalogoResponse();
             CategoriaResponse request = new CategoriaResponse()
             {
                 Pk = i.PkCategoria,
@@ -25,9 +28,7 @@ namespace Domain.Dto
                 Modelo = i.Modelo,
                 Descripcion = i.Descripcion,
                 FkCatalogo = i.FkCatalogo,
-
-
-
+                Catalogo = x.Conversor(i.Catalogo)
             };
 
             return request;

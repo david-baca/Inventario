@@ -19,7 +19,7 @@ export const App = () => {
           <Dash/>
         </Protect>}/>
 
-        <Route path='/Dash/Catalogo*' element={<Protect><Dash contenido={
+        <Route path='/Dash/Catalogo/*' element={<Protect><Dash contenido={
           <Catalogos/>
         }/></Protect>}/>
 

@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import { Post, Delete, Put } from "../Conexion/Conexion"
+import { Post, Delete, Put, Get } from "../Conexion/Conexion"
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
@@ -20,7 +20,6 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 export const Toolbox = ({Entidad:E, Reload:R}) =>{
-  console.log(E,R);
   const Kit_creation = ModulCreate({Entidad:E, Recargar:R});
   const Kit_Edit = ModulEdit({Entidad:E, Recargar:R});
   const Kit_Eliminate = ModulEliminate({Entidad:E, Recargar:R});
@@ -31,6 +30,7 @@ const FormVentana = (Accion) => {
   const [Value, setValue] = useState(false);
   const On = (val) => setValue(val);
   const Off = () => setValue(false);
+  console.log(Value)
   const Change = {
     Nombre: (e) => {
       let newValue = {...Value};
@@ -148,6 +148,20 @@ const FormVentana = (Accion) => {
               <input value={Value.costo} onChange={Change.Costo} required autoComplete="off" type="text" className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600" placeholder="Costo" />
                   <label className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Costo</label>
               </div>
+            )}
+            {Value.fkCatalogo != null && (
+              <select name="select">
+                {Value.catalogo.map((element) => ( (
+                  <option value={element.pk}>{element.nombre}</option>
+                )))}
+              </select>
+            )}
+            {Value.fkrol != null && (
+              <select name="select">
+                {Value.rol.map((element) => ( (
+                  <option value={element.pk}>{element.nombre}</option>
+                )))}
+              </select>
             )}
           <div className="flex gap-5 pt-5">
           <button onClick={()=>Off()} className="bg-blue-500 text-white w-full rounded-md px-2 py-1"> Cancelar </button>
