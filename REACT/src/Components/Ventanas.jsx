@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import { Post, Delete, Put, Get } from "../Conexion/Conexion"
+import { Link } from 'react-router-dom';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
@@ -27,6 +28,7 @@ export const Toolbox = ({Entidad:E, Reload:R}) =>{
 }
 
 const FormVentana = (Accion) => {
+  const navigate = useNavigate();
   const [Value, setValue] = useState(false);
   const [packCatalogos, setpackCatalogos] = useState();
   const [packRoles, setpackRoles] = useState();
@@ -41,10 +43,10 @@ const FormVentana = (Accion) => {
     setpackRoles(pack);
   }
 
-  const On = (val) => {
+  const On = async(val) => {
+    await CargarCatalogos();
+    await CargarRoles();
     setValue(val)
-    CargarCatalogos();
-    CargarRoles();
   };
   const Off = () => setValue(false);
   const Change = {
@@ -82,7 +84,27 @@ const FormVentana = (Accion) => {
       let newValue = {...Value};
       newValue.costo = e.target.value
       setValue(newValue);    
-    }
+    },
+    fkCatalogo : (e) => {
+      const selectedValue = e.target.value
+      let newValue = {...Value};
+      if (selectedValue  === 'Catalogo') {
+        navigate('/Dash/Catalogo');
+        return
+      }
+      newValue.fkCatalogo = selectedValue
+      setValue(newValue);    
+    },
+    fkRol : (e) => {
+      const selectedValue = e.target.value
+      let newValue = {...Value};
+      if (selectedValue === 'roles') {
+        navigate('/Dash/Catalogo');
+        return
+      }
+      newValue.fkRol = selectedValue
+      setValue(newValue);    
+    },
   }
   const SaveChanges = () => {
     if (Value.nombre === '') {
@@ -111,6 +133,14 @@ const FormVentana = (Accion) => {
     }
     if (Value.apellidoM === '') {
       alert('El apellido materno no puede estar vacío');
+      return;
+    }
+    if (Value.fkCatalogo === 0) {
+      alert('El Catalogo no puede estar vacío');
+      return;
+    }
+    if (Value.fkRol === 0) {
+      alert('El Rol no puede estar vacío');
       return;
     }
     
@@ -167,35 +197,43 @@ const FormVentana = (Accion) => {
             )}
 
             {Value.fkCatalogo != null && (
-              <select name="select">
-              <option value={3} disabled selected>Selecciona un Catalogo</option>
+            <select defaultValue={Value.fkCatalogo} className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600" name="select" onChange={Change.fkCatalogo}>
+              <option value={0} disabled selected className="bg-gray-400 text-white">Selecciona un Catalogo</option>
               {packCatalogos != null && packCatalogos.length > 0 ? (
-                packCatalogos.map((element) => (
+                packCatalogos.map((element) => 
+                (
                   <option key={element.pk} value={element.pk}>
                     {element.nombre}
                   </option>
                 ))
-              ) : (
+                ) : (
                 <option value="" disabled>No hay datos disponibles..</option>
-              )}
+                )}
+                <option className="bg-purple-500 text-white" value="Catalogo" > 
+                  Controlador
+              </option>
             </select>
             )}
 
-            {Value.fkrol != null && (
-              <select name="select">
-              <option value={3}  >Selecciona una opción</option>
+            {Value.fkRol != null && ( 
+            <select defaultValue={Value.fkRol} className="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600" name="select" onChange={Change.fkRol}>
+              <option value={0} disabled selected className="bg-gray-400 text-white">Selecciona un Rol</option>
               {packRoles != null && packRoles.length > 0 ? (
-                packRoles.map((element) => (
+                packRoles.map((element) => 
+                (
                   <option key={element.pk} value={element.pk}>
                     {element.nombre}
                   </option>
                 ))
-              ) : (
-                <option value="" >No hay datos disponibles</option>
-              )}
+                ) : (
+                <option value={0} disabled>No hay datos disponibles..</option>
+                )}
+                <option className="bg-purple-500 text-white" value="roles" > 
+                  Controlador
+              </option>
             </select>
-            
             )}
+
           <div className="flex gap-5 pt-5">
           <button onClick={()=>Off()} className="bg-blue-500 text-white w-full rounded-md px-2 py-1"> Cancelar </button>
           <button onClick={SaveChanges} className="bg-green-500 text-white w-full rounded-md px-2 py-1">

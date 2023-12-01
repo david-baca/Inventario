@@ -24,9 +24,22 @@ export const Dash = ({contenido}) =>{
                 <Link to="/Dash/Categorias">
                     <DashBtn Titulo="Categorias"/>
                 </Link>
-                <Link to="/Dash/Historial">
-                    <DashBtn Titulo="Historial"/>
+                <Link to="/Dash/Area">
+                    <DashBtn Titulo="Areas"/>
                 </Link>
+                <Link to="/Dash/Fuente">
+                    <DashBtn Titulo="Fuente"/>
+                </Link>
+                <Link to="/Dash/Provedor">
+                    <DashBtn Titulo="Provedor"/>
+                </Link>
+                <Link to="/Dash/Roles">
+                    <DashBtn Titulo="Roles"/>
+                </Link>
+                <Link to="/Dash/Responsable ">
+                    <DashBtn Titulo="Responsable"/>
+                </Link>
+                
               
               </div>
             </div>

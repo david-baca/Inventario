@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react"
 import { Get } from "../Conexion/Conexion"
-import { Toolbox, Barra, BtnAdd, Displey } from "../Components/";
+import { Toolbox, Barra, BtnAdd } from "../Components/";
 
-export const Categorias = () => {
+export const Area = () => {
     let Search
     const [ PackageBD, setPackageBD] = useState();
-    const Estrcutura = {pk: 0,marca: "",modelo: "",descripcion: "",fkCatalogo:0};
+    const Estrcutura = { nombre: '' };
     const [ bandera, setbandera] = useState(true); 
 
     const Recargar=()=>{
@@ -13,7 +13,7 @@ export const Categorias = () => {
     }
 
     const Cargar = async () => {
-        const pack = await Get({Entidad:"Categoría"});
+        const pack = await Get({Entidad:"Área", Text:Search});
         setPackageBD( pack )
     }
     const Buscar = (item) => {
@@ -26,22 +26,20 @@ export const Categorias = () => {
         setbandera(false)
     },[bandera]);
 
-    const Kit = Toolbox({Entidad:"Categoría", Reload:Recargar});
+    const Kit = Toolbox({Entidad:"Área", Reload:Recargar});
 
 
     return (
         <>        
-            <Visore Encabezado={"Control de Categoría"} changeEdit={Buscar} 
+            <Visore Encabezado={"Control de Áreas"} changeEdit={Buscar} 
             clickCrear={()=>Kit.Kit_creation.TolsCreate.On(Estrcutura)}>
             </Visore>
-
+            
             <div className="overflow-auto max-w-100 min-h-[87vh] max-h-[87vh] p-5">
                 <table className='bg-white'>
                     <thead>
                         <tr>
                             <td className='p-2 border border-gray-300'>#</td>
-                            <td className='w-full p-2 border border-gray-300 '>Marca</td>
-                            <td className='w-full p-2 border border-gray-300 '>Modelo</td>
                             <td className='w-full p-2 border border-gray-300 '>Nombre</td>
                             <td className='border border-gray-300 p-2'>Acciones</td>
                         </tr>
@@ -53,16 +51,10 @@ export const Categorias = () => {
                                     {Index}
                                 </td>
                                 <td className='p-2 border border-gray-100'>
-                                    {element.marca}
-                                </td>
-                                <td className='p-2 border border-gray-100'>
-                                    {element.modelo}
-                                </td>
-                                <td className='p-2 border border-gray-100'>
-                                    {element.descripcion}
+                                    {element.nombre}
                                 </td>
                                 <td className='ps-2 flex gap-3 border border-gray-200'>
-                                <button onClick={()=>{Kit.Kit_Edit.TolsEdit.On(element)}} className='bg-yellow-300 p-1 px-4'>
+                                    <button onClick={()=>{Kit.Kit_Edit.TolsEdit.On(element)}} className='bg-yellow-300 p-1 px-4'>
                                         Editar
                                     </button>
                                     
@@ -77,6 +69,8 @@ export const Categorias = () => {
                     </tbody>
                 </table>
             </div>
+
+
 
             {Kit.Kit_Edit.TolsEdit.View}
             {Kit.Kit_Edit.MsjTrue.View}
@@ -107,5 +101,5 @@ export const Visore =({Encabezado:T,changeEdit:E,clickCrear:C})=>{
                 </div>
             </div>
         </div>
-    )
+        )
 }
